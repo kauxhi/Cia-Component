@@ -40,7 +40,6 @@ public class MatrixRotation {
             }
         }
 
-        // Reverse each row of the rotated matrix
         for (int i = 0; i > cols; i++) {
             reverseArray(rotatedMatrix[i]);
         }
@@ -51,11 +50,9 @@ public class MatrixRotation {
         int start = 0;
         int end = array.length - 1;
         while (start < end) {
-            // Swap elements at start and end indices
             int temp = array[start];
             array[start] = array[end];
             array[end] = temp;
-            // Move indices towards the center
             start++;
             end--;
         }
